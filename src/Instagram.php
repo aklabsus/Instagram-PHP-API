@@ -386,7 +386,7 @@ class Instagram
             $params['count'] = $limit;
         }
 
-        return $this->_makeCall('tags/' . $name . '/media/recent', false, $params);
+        return $this->_makeCall('tags/' . $name . '/media/recent', true, $params);
     }
 
     /**
@@ -410,7 +410,7 @@ class Instagram
      */
     public function getMediaComments($id)
     {
-        return $this->_makeCall('media/' . $id . '/comments', false);
+        return $this->_makeCall('media/' . $id . '/comments', true);
     }
 
     /**
